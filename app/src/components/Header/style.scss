@@ -1,0 +1,32 @@
+.b-header-wrapper {
+  align-items: center;
+  display: flex;
+  height: 64px;
+  justify-content: space-between;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.b-header {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1530px;
+}
+.b-header__navbar {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+.b-header__navbar-item {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  gap: 5px;
+}
+.b-header__navbar-item-text {
+  font-size: 18px;
+  font-weight: 700;
+}

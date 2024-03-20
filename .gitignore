@@ -1,0 +1,28 @@
+# Folders
+
+*/node_modules/
+/.vscode/
+.idea/
+/coverage
+*/dist
+/data
+/app/config/credentials
+*/logs
+/environments/*
+credentials/
+environments/
+
+# Files
+
+*.log
+*.orig
+yarn.lock
+yarn-log.lock
+yarn-error.log
+stats.json
+gcp-credentials.json
+.env
+.env.yaml
+.DS_Store
+values.yaml
+docker-pass.txt

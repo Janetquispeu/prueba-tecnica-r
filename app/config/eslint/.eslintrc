@@ -1,0 +1,65 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:jest/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "requireConfigFile": false,
+    "babelOptions": {
+      "babelrc": false,
+      "configFile": false,
+      "parserOpts": {
+        "plugins": ["jsx", "tsx"]
+      }
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "plugins": [
+    "typescript",
+    "react",
+    "jest"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": { "extensions": [".js", ".jsx", ".ts", ".tsx"] }}
+  },
+  "rules": {
+    "react/sort-comp": 0,
+    "react/prop-types": 0,
+    "no-useless-escape": 1,
+    "max-len": [1, 156],
+    "react/jsx-filename-extension": 0,
+    "no-unused-vars": [1],
+    "no-param-reassign": [2, { "props": false }],
+    "import/prefer-default-export": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-unresolved": 0,
+    "react/no-access-state-in-setstate": 0,
+    "jsx-a11y/label-has-for": 0,
+    "jsx-a11y/anchor-is-valid": "off",
+    "comma-dangle": 0,
+    "no-underscore-dangle": [2, { "allow": ["__REDUX_DEVTOOLS_EXTENSION__"] }],
+    "react/function-component-definition": [2, { "namedComponents": "arrow-function", "unnamedComponents": "arrow-function" }],
+    "react/state-in-constructor": 0,
+    "react/destructuring-assignment": 0,
+    "object-shorthand": ["error", "always", { "avoidQuotes": true }],
+    "comma-spacing": 0,
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/no-did-update-set-state": "off",
+    "no-unused-expressions": 0,
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      { "js": "never", "jsx": "never", "ts": "never", "tsx": "never", "json": "never"}
+    ],
+    "react/require-default-props": "off",
+    "react/no-unstable-nested-components": "off"
+  }
+}

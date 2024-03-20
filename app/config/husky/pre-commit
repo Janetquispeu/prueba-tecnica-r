@@ -1,0 +1,38 @@
+#!/bin/bash
+. "$(dirname "$0")/_/husky.sh"
+
+cd ./app/config/husky
+
+if [ -n "$(git status --porcelain)" ]; then
+  echo "Iniciando comprobación de commit...";
+  npm run lint &&
+  #npm run stylelint
+
+  RESULT=$?
+
+  if [ $RESULT == 0 ]; then
+    echo -e "\e[92m
+      _____________
+    | Good Job...! |
+    '-------------'
+             \   ^__^
+              \  (^^)\_______
+                 (__)\       )\/\
+                    ||----w |
+                    ||     ||
+    "
+    exit 0
+  else
+    echo -e "\e[91m
+      __________________________
+    | Fix your fucking code...! |
+    '--------------------------'
+            \  ^__^
+            \  (><)\_______
+               (__)\       )\/\
+                  ||----w |
+                  ||     ||
+    "
+    exit 1
+  fi;
+fi;
