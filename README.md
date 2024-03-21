@@ -1,20 +1,58 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# ![](https://www.rimac.com/ventadigital/ami/assets/rebrand/logo-rimac.svg) PRUEBA TÉCNICA
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+Este desafío técnico se basa en maquetar 3 vistas (login, plans y resume) acorde a figma (https://www.figma.com/file/KGftIKxhcVm41kTKMsfTh2/Frontend-Challenge-2023?type=design&node-id=12-155852&mode=design&t=PhmkyYEkMyBpO8xi-0) y consumir 2 apis (user y plans) y mostrar planes acorde a la edad del usuario.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+## Comenzando 🚀
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+Primero creamos nuestra repo en github (https://github.com/Janetquispeu/prueba-tecnica-r)
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+### Pre-requisitos 📋
+
+- ✅ Instalar Git (https://git-scm.com/download/win)
+- ✅ Instalar Node V~16 (https://nodejs.org/en/blog/release/v16.16.0)
+
+### Herramientas 🔧
+- React JS
+- Redux
+- Redux-form
+- Typescript
+- Material-UI
+- Sass
+- Styled-components
+
+### Instalación 🔧
+
+1. Situarse en la carpeta app del repositorio y ejecutar:
+```bash
+npm install 
+```
+
+2. Para levantar el proyecto ejecutar:
+```bash
+npm run client:start 
+```
+Cargar el proyecto en http://localhost:4007
+
+## Para subir un cambio 📦
+Ejecutar linteo, si hay errores debemos corregir.
+```bash
+npm run lint
+```
+
+## Para el despligue
+Usaremos github para desplegar nuestros cambios.
+
+## Ambientes
+
+| Ambiente | Sitio |
+|:------------- |:---------------:|
+| local   | localhost:4007   |
+| prod   | https://qa.admin.sellercenter.pe  |
+
+### Vistas
+
+| vistas | local | prod |
+|:------------- |:---------------:|:---------------:|
+| login   | https://dev.admin.sellercenter.pe/home | https://admin.sellercenter.pe/home   |
+| plans   | https://dev.admin.sellercenter.pe/order | https://admin.sellercenter.pe/order  |
+| resume   | https://dev.admin.sellercenter.pe/catalogue | https://admin.sellercenter.pe/catalogue

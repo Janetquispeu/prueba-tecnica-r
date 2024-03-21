@@ -9,7 +9,8 @@
     "client:build": "webpack --config config/webpack/prod.js",
     "lint": "eslint --config ./config/eslint/.eslintrc ./src --ext .tsx,.ts",
     "stylelint": "stylelint --config ./config/stylelint/.stylelintrc ./src/**/*.{css,scss,tsx}",
-    "test:unit": "jest --config ./config/jest/jest.config.js"
+    "test:unit": "jest --config ./config/jest/jest.config.js",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
