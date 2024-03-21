@@ -21,6 +21,10 @@ const routes: RouteObject[] = ([
       {
         path: 'resume',
         element: <Resume />,
+      },
+      {
+        path: '*',
+        element: <div>Not Found</div>,
       }
     ]
   }

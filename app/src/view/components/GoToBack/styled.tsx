@@ -1,18 +1,17 @@
 import styled from "styled-components"
 
-export const PlansStyle = styled.div`
-  align-items: center;
+export const GoBackWrapper = styled.div`
+  cursor: pointer;
   display: flex;
-  height: calc(100% - 106px);
-  justify-content: center;
-  padding-top: 64px;
-`;
-
-export const LayoutContent = styled.section`
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1530px;
+  gap: 10px;
+  span {
+    color: #4F4FFF;
+    font-size: 18px;
+    font-weight: 700;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `;
 
 export const BoxWrapper = styled.div`

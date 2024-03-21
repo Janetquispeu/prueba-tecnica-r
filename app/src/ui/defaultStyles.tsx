@@ -22,7 +22,7 @@ export const defaultStyle = css`
     padding: 0 !important;
   }
 
-  #root-dev {
+  #root {
     height: 100%;
   }
 `;
