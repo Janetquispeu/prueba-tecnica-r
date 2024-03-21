@@ -1,15 +1,21 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Divider from '@mui/material/Divider';
 import { images } from '@app/assets/images';
+import { saveData } from '@app/view/slices/saveUserData';
 import LoginForm from '../Form'
 import { ImageResponsive, RightBoxStyle } from './styled';
 
 export const RightBox = () => {
+  const dispatch = useDispatch<any>();
   const navigate = useNavigate();
+
   const handleSubmit = (values) => {
-    //TO DO
-    console.log(values, 'values')
+    dispatch(saveData({ data: {
+      phone: values.phone,
+      documentNumber: values.documentNumber
+    }}))
     navigate('/plans');
   };
 
@@ -32,9 +38,7 @@ export const RightBox = () => {
         <LoginForm
           onSubmit={handleSubmit}
           name="loginForm"
-          initialValues={{
-            documentType: '1'
-          }}
+          initialValues={{ documentType: '1' }}
         />
       </div>
     </RightBoxStyle>

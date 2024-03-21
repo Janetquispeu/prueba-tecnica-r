@@ -25,15 +25,18 @@ export const Plans = () => {
   const plan: PlanResponse = useSelector(selectPlans);
   const [userAge, setUserAge] = useState<number>(0);
   const [planFilter, setPlanFilter] = useState([]);
+  const [applyDiscount, setApplyDiscount] = useState(false);
   const [selectedValue, setSelectedValue] = useState('a');
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    let discount = false;
     const newPlans = [...plan.data].filter((item) => (userAge <= item.age));
 
     if (event.target.value === FOR_ANOTHER_PERSON) {
-      //Tiene descuento
+      discount=true;
     }
 
+    setApplyDiscount(discount);
     setPlanFilter(newPlans);
     setSelectedValue(event.target.value);
   };
@@ -93,6 +96,8 @@ export const Plans = () => {
                     image={data[item.age].image}
                     item={item}
                     tag={data[item.age].tag}
+                    user={user.data}
+                    applyDiscount={applyDiscount}
                   />
                 ))}
               </PlanCardWrapper>

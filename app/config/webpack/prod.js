@@ -6,8 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const outputDirectory = '../../../public';
 require('dotenv').config({ path: './.env' });
-const appRoot = process.env.APP_ROOT || '';
-console.log(process.env.APP_ROOT, 'root')
+
 module.exports = {
   ...common,
   mode: 'production',

@@ -40,19 +40,17 @@ npm run lint
 ```
 
 ## Para el despligue
-Usaremos github para desplegar nuestros cambios.
+Usaremos Firebase para desplegar nuestros cambios.
 
 ## Ambientes
 
 | Ambiente | Sitio |
 |:------------- |:---------------:|
-| local   | localhost:4007   |
-| prod   | https://qa.admin.sellercenter.pe  |
+| local   | http://localhost:4007   |
+| prod   | https://prueba-tecnica-b6170.web.app  |
 
 ### Vistas
 
 | vistas | local | prod |
 |:------------- |:---------------:|:---------------:|
-| login   | https://dev.admin.sellercenter.pe/home | https://admin.sellercenter.pe/home   |
-| plans   | https://dev.admin.sellercenter.pe/order | https://admin.sellercenter.pe/order  |
-| resume   | https://dev.admin.sellercenter.pe/catalogue | https://admin.sellercenter.pe/catalogue
+| login   | http://localhost:4007  | https://prueba-tecnica-b6170.web.app   |

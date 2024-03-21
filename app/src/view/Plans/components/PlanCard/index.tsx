@@ -1,8 +1,10 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Divider } from '@mui/material';
+import { saveData } from '@app/view/slices/saveUserData';
 import { Button } from '@app/components/Button';
-import { Plan } from '../../model';
+import { Plan, User } from '../../model';
 import {
   PlanCardStyle,
   PlanDescription,
@@ -14,12 +16,22 @@ interface Props {
   image: string;
   item: Plan;
   tag: boolean;
+  user: User;
+  applyDiscount: boolean;
 }
 
-export const PlanCard = ({ image, item, tag }: Props) => {
+export const PlanCard = ({ image, item, tag, user, applyDiscount }: Props) => {
+  const dispatch = useDispatch<any>();
   const navigate = useNavigate();
 
   const handleClick = () => {
+    const newPrice = applyDiscount ? (item.price - (0.05 * item.price)) : item.price;
+
+    dispatch(saveData({ data: {
+      planName: item.name,
+      price: newPrice,
+      ...user
+    }}))
     navigate('/resume');
   };
 
